@@ -1,0 +1,19 @@
+.app-wrapper {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    grid-template-areas: "h h" "n c" "f f";
+    grid-template-rows: 60px 1fr 30px;
+    grid-template-columns: 2fr 10fr;
+    /*grid-gap: 10px;*/
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: #79B362;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}

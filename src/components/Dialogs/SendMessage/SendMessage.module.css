@@ -1,0 +1,23 @@
+.sendMessage {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 50px 30px;
+    grid-row-gap: 10px;
+    color: brown;
+}
+
+.sendMessage textarea {
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid brown;
+    color: brown;
+}
+
+.sendMessage button {
+    width: 40%;
+    margin: 0 auto;
+    border: #DEECBB;
+    border-radius: 5px;
+    background: greenyellow;
+    color: brown;
+}

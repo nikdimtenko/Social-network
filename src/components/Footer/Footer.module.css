@@ -1,0 +1,9 @@
+.footer {
+    grid-area: f;
+    background: #4A4A4A;
+    font-size: 12px;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

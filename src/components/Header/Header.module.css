@@ -1,0 +1,25 @@
+.header {
+    grid-area: h;
+    background-color: #4A4A4A;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.header a {
+    float: right;
+    color: black;
+    margin: 10px 40px 0px 0px;
+    text-decoration: none;
+    padding: 8px 25px;
+    background: #79B362;
+    border-radius: 5px;
+}
+
+.singIn {
+    float: right;
+    width: 40px;
+    margin: 9px;
+}

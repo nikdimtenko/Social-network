@@ -1,0 +1,26 @@
+.grid {
+    margin-top: 50%;
+    display: grid;
+    background: grey;
+    width: 100%;
+    height: 100px;
+    grid-template-areas: "hF hF hF" "fr fr fr";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.headerFriends {
+    grid-area: hF;
+    padding-top: 5px;
+}
+
+.friends {
+    grid-area: fr;
+    font-size: 12px;
+}
+.friends img {
+    width: 40px;
+    border-radius: 30px ;
+}

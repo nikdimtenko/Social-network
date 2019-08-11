@@ -1,0 +1,29 @@
+.container {
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container textarea {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container button {
+    border: #DEECBB;
+    border-radius: 5px;
+    background: greenyellow;
+    padding: 5px 10px;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+
+}
