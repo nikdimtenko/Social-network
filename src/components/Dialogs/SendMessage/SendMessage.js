@@ -1,22 +1,22 @@
 import React from 'react';
 import s from './SendMessage.module.css';
+import {sendMessageCreator, updateTextMessageCreator} from "../../../redux/dialogsReducer";
 
 const SendMessage = (props) => {
 
-    let refOfButton = React.createRef();
-
-    let postMessage = () => {
-        props.addMessage();
+    let sendMessage = () => {
+        props.dispatch(sendMessageCreator());
     };
 
-    let updateTextMessage = () => {
-        props.updateTextMessage(refOfButton.current.value);
-    }
+    let updateTextMessage = (event) => {
+        let value = event.target.value;
+        props.dispatch(updateTextMessageCreator(value));
+    };
 
     return(
         <div className={s.sendMessage}>
-            <textarea ref={refOfButton} onChange={updateTextMessage} value={props.textMessage} placeholder="Input your message"/>
-            <button onClick={postMessage}>Post!</button>
+            <textarea onChange={updateTextMessage} value={props.textMessage} placeholder="Input your message"/>
+            <button onClick={sendMessage}>Post!</button>
         </div>
     );
 }

@@ -1,3 +1,7 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+import sidebarReducer from "./sidebarReducer";
+
 let store = {
     _state: {
         dialogPage: {
@@ -26,7 +30,6 @@ let store = {
                 {id: 7, message: 'MAAn'}
             ],
         },
-
         profilePage: {
 
             newPostText: '',
@@ -73,40 +76,10 @@ let store = {
                     name: "Dmitry Nikitenka",
                     imgSrc: "https://images.wallpaperscraft.ru/image/pustynia_gory_doroga_144727_1920x1080.jpg"
                 }
-        }
+        },
+        sidebar: {}
     },
 
-    addPost() {
-
-        let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            like: 3,
-            srcImg: "https://www.logaster.ru/image/logo/1/menur-15274-240.png"
-        };
-
-        this._state.profilePage.postData.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber();
-    },
-    updateNewPostText (newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber();
-    },
-    addMessage () {
-
-        let newMessage = {
-            id: 10,
-            message: this._state.dialogPage.textMessage
-        }
-        this._state.dialogPage.messages.push(newMessage);
-        this._state.dialogPage.textMessage = '';
-        this._callSubscriber();
-    },
-    updateTextMessage (newText) {
-        this._state.dialogPage.textMessage = newText;
-        this._callSubscriber();
-    },
     _callSubscriber() {
 
     },
@@ -114,11 +87,16 @@ let store = {
     getState() {
         return this._state;
     },
+
     subscribe (observer) {
         this._callSubscriber = observer;
     },
-    dispatch() {
 
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogPage = dialogsReducer(this._state.dialogPage, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+        this._callSubscriber();
     }
 };
 
