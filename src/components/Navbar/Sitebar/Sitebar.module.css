@@ -1,7 +1,7 @@
 .grid {
     margin-top: 50%;
     display: grid;
-    background: grey;
+    background: #D3D3D3;
     width: 100%;
     height: 100px;
     grid-template-areas: "hF hF hF" "fr fr fr";

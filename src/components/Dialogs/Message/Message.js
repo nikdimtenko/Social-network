@@ -1,10 +1,17 @@
 import React from 'react';
-import s from '../Dialogs.module.css';
+import style from './Message.module.css';
+
 
 const Message = (props) => {
-    return (
-        <div className={s.dialog}>{props.message}</div>
-    )
+
+    let checkOwner = () => {
+        if (props.owner === 'im') {
+            return <div className={style.im}> {props.message}</div>;
+        }
+        else
+            return <div className={style.friend}> {props.message}</div>;
+    }
+    return checkOwner();
 }
 
 export default Message;

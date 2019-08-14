@@ -3,10 +3,15 @@ import s from '../Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 
 const DialogItem = (props) => {
+
+    let sendId = () => {
+        props.sendId(props.id);
+    };
+
     return (
-        <div className={s.active  + ' ' + s.mini}>
+        <div className={`${s.mini} ${s.active}`}>
             <img src="https://images.wallpaperscraft.ru/image/pustynia_gory_doroga_144727_1920x1080.jpg"/>
-            <NavLink to={'/dialogs/' + props.id}><div>{props.name}</div></NavLink>
+            <NavLink onClick={sendId} to={'/dialogs/' + props.id} activeClassName={s.active} className={s.colorName} ><div>{props.name}</div></NavLink>
         </div>
     )
 }

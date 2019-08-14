@@ -5,7 +5,7 @@
 }
 
 .dialogsItems {
-    background: grey;
+    background: #D3D3D3;
     padding: 10px;
 }
 
@@ -13,7 +13,11 @@
     text-decoration: none;
 }
 
-.dialogsItems .active {
+.colorName {
+    color: brown;
+}
+
+.active {
     color: #79B362;
 }
 
@@ -27,7 +31,6 @@
     height: 100%;
     display: flex;
     align-items: center;
-    color: greenyellow;
 }
 .mini img {
     width: 50px;
@@ -41,6 +44,9 @@
 }
 
 .messages {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     height: 300px;
     max-height: 300px;
     border-radius: 30px;

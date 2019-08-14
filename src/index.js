@@ -3,7 +3,7 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import store from './redux/state';
+import store from './redux/redux-store';
 import React from 'react';
 
 
@@ -11,8 +11,7 @@ import React from 'react';
 export let rerenderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={store.getState()}
-                 dispatch={store.dispatch.bind(store)}/>
+            <App store={store}/>
         </BrowserRouter>, document.getElementById('root'));
 }
 
