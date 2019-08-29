@@ -74,3 +74,8 @@
 .country {
     font-size: 12px;
 }
+
+.loader {
+   max-width: 100px;
+   margin: auto auto;
+}

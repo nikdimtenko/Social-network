@@ -1,6 +1,7 @@
 import React from 'react';
 import userPhotos from '../../../img/avatar.png';
 import style from './User.module.css';
+import loader from "../../../img/loader.gif";
 
 const User = (props) => {
 
@@ -26,6 +27,7 @@ const User = (props) => {
                     onClick={() => props.onChangePage(page)}>{page}</span>)
                 }
             </div>
+            {props.isFetching ? <img className={style.loader} src={loader}/> : null}
             {props.findUsers.map(user => <div className={style.field}>
             <span className={style.previewLeft}>
                 <div>
