@@ -3,8 +3,11 @@
     background-color: #DEECBB;
     padding: 30px;
 }
+nav :last-child {
+    margin-top: 20px;
+}
 
-.item  a{
+.item  a {
     color: white;
     text-decoration: none;
 }

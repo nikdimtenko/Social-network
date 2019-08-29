@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.listPage span {
+    margin: 0 2px;
+}
+
+.currentPage {
+    font-weight: bold;
+}
+.otherPage:hover {
+    color: #4A4A4A;
+    text-decoration: underline;
+}
+
+.field {
+    display: flex;
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #DEECBB;
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.followButton button {
+    width: 100%;
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+    background: greenyellow;
+
+}
+
+.previewRight {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.description {
+    width: 80%;
+}
+
+.fullName {
+    color: greenyellow;
+    text-align: center;
+    padding: 5px;
+}
+
+.status {
+    background: #DEECBB;
+    border-radius: 20px;
+    padding: 5px;
+    height: 50%;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    color: #DEECBB;
+    text-align: center;
+}
+
+.country {
+    font-size: 12px;
+}

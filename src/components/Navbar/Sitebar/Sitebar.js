@@ -8,7 +8,7 @@ let friendList = [
     { id: 3, name: "Ruby", imgSrc: "https://cdn.shopifycloud.com/hatchful-web/assets/c3a241ae6d1e03513dfed6f5061f4a4b.png"}
 ];
 
-let listFriendToSitebar = friendList.map( name => <Friend name={name.name} imgSrc={name.imgSrc}/> )
+let listFriendToSitebar = friendList.map( name => <Friend key={name.id} name={name.name} imgSrc={name.imgSrc}/> )
 
 
 const Sitebar = () => {

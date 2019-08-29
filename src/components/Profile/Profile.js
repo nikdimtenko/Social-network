@@ -6,9 +6,9 @@ const Profile = (props) => {
     return (
         <div>
             <ProfileInfo profileInfo={props.store.getState().profilePage.profileInfo}/>
-            <MyPostsContainer store={props.store}/>
+            <MyPostsContainer/>
         </div>
     );
-}
+};
 
 export default Profile;

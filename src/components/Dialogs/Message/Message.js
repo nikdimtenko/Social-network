@@ -10,8 +10,8 @@ const Message = (props) => {
         }
         else
             return <div className={style.friend}> {props.message}</div>;
-    }
+    };
     return checkOwner();
-}
+};
 
 export default Message;

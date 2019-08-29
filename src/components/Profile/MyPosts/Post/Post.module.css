@@ -1,16 +1,8 @@
-.item {
-    display: grid;
-    grid-template-areas:
-                        "i n n"
-                        "i t l";
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
-
-    color: greenyellow;
-    margin: 5px;
-    padding: 5px;
-    border: 2px solid #DEECBB;
-    border-radius: 5px ;
+.posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .item img {
@@ -19,23 +11,56 @@
     border-radius: 30px;
 }
 
-.img {
-    grid-area: i;
+.item {
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+    max-width: 30%;
+    border: 1px solid #f9f9f9;
+    border-radius: 20px;
+    margin: 0 5px 5px 0;
+    padding: 10px;
 }
-
-.like {
-    grid-area: l;
-    padding-top: 80%;
-
+.avatar{
+    display: flex;
+    width: 95%;
 }
 
 .text {
-    grid-area: t;
-    color: red;
+    width: 100%;
+}
 
+.name {
+    min-width: 100%;
+    align-self: flex-start;
+    color: greenyellow;
+    text-align: center;
 }
 
 .message {
-    grid-area: n;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px auto;
+    background: #DEECBB;
     color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.text {
+    color: brown;
+    margin-left: 20px
+}
+.likeButt {
+    background: brown;
+    border-radius: 10px;
+    margin-left: 20px;
 }

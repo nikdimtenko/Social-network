@@ -19,6 +19,10 @@
     padding: 5px 10px;
 }
 
+.container h3 {
+    padding: 10px 0 10px 0;
+}
+
 .grid {
     display: grid;
     width: 100%;
