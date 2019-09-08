@@ -1,7 +1,7 @@
 import React from 'react';
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
-import {addMyMessageCreator, setCurrentIdCreator, updateMyMessageCreator} from "../../redux/historyDialogsReducer";
+import {addMyMessage, setCurrentId, updateMyMessage} from "../../redux/historyDialogsReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -11,20 +11,7 @@ let mapStateToProps = (state) => {
         newMyTextMessage: state.historyDialogs.newMyTextMessage,
     }
 };
-let mapDispatchToProps = (dispatch) => {
-    return {
-        sendMessage: () => {
-            dispatch(addMyMessageCreator());
-        },
-        updateTextMessage: (newText) => {
-            dispatch(updateMyMessageCreator(newText));
-        },
-        sendId : (currentId) => {
-            dispatch(setCurrentIdCreator(currentId));
-         }
-    }
-};
 
-const DialogsContainer =  connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+const DialogsContainer =  connect(mapStateToProps, {addMyMessage, updateMyMessage, setCurrentId})(Dialogs);
 
 export default DialogsContainer;

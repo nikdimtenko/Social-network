@@ -1,19 +1,47 @@
 .avatar {
-    width: 100%;
+    width: 150px;
+    height: 120px;
     grid-area: avatar;
 }
 
-.descriptionBlock {
-    font-family: 'Montserrat';
-    grid-area: desc;
+.informationBlock {
     background: #DEECBB;
+}
+
+.name {
+    font-size: 30px;
+    text-align: center;
     padding: 10px;
-    font-size: 50px;
+}
+.name:hover {
+    background: greenyellow;
+    transition: 1s all;
+}
+
+.status {
+    width: 100%;
+    background: brown;
+    text-align: center;
+    font-size: 20px;
+    padding: 3px;
+    box-sizing: border-box;
+    transition: 1s all;
+}
+.status:hover {
+    opacity: 0.8;
 }
 
 .content {
     display: grid;
     grid-template: "avatar desc";
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 150px 0.6fr;
 
+}
+
+.contacts {
+    padding: 3px;
+}
+.contacts a{
+    text-decoration: none;
+    color: brown;
 }

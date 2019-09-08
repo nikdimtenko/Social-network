@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Setting from './components/Setting/Setting';
@@ -20,7 +20,7 @@ const Navigation = (props) => {
             <Navbar/>
             <div className='app-wrapper-content'>
                 {/*<Route path="/" exact render={() => <SignIn />}/>*/}
-                <Route path='/social/profile' render={()=><Profile store={props.store}/>}/>
+                <Route path='/social/profile' render={()=><ProfileContainer store={props.store}/>}/>
                 <Route path='/social/dialogs' render={()=><DialogsContainer store={props.store}/>}/>
                 <Route path='/social/news' component={News}/>
                 <Route path='/social/music' component={Music}/>

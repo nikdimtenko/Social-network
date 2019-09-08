@@ -1,43 +1,42 @@
 import React from 'react';
 import userPhotos from '../../../img/avatar.png';
 import style from './User.module.css';
-import loader from "../../../img/loader.gif";
+import Preloader from "../../common/Preloader/Preloader";
+import {NavLink} from "react-router-dom";
+
 
 const User = (props) => {
 
-    let follow = (id) => {
-        props.follow(id)
-    };
-    let unfollow = (id) => {
-        props.unfollow(id);
-    };
-
     let countPage = Math.ceil(props.totalUsersCount / props.sizePage);
     let numberPage = [];
-
     for (let i = 1; i <= countPage; i++)
         numberPage.push(i);
-
 
     return (
         <div className={style.container}>
             <div className={style.listPage}>
-                {numberPage.map(page => <span
+                {
+                    numberPage.map(page => <span
                     className={props.currentPage === page ? style.currentPage : style.otherPage}
                     onClick={() => props.onChangePage(page)}>{page}</span>)
                 }
             </div>
-            {props.isFetching ? <img className={style.loader} src={loader}/> : null}
-            {props.findUsers.map(user => <div className={style.field}>
-            <span className={style.previewLeft}>
-                <div>
-                    <img className={style.avatar} src={
-                        user.photos.small === null ? userPhotos : user.photos.small}/>
-                </div>
+            {props.users.map(user => <div className={style.field}>
+            <span>
+                <NavLink to={`/profile/${user.id}`}>
+                    <div>
+                        <img className={style.avatar} src={
+                            user.photos.small === null ? userPhotos : user.photos.small}/>
+                     </div>
+                </NavLink>
                 <div className={style.followButton}>
                     {user.followed ?
-                        <button onClick={() => unfollow(user.id)}>Unfollow</button> :
-                        <button onClick={() => follow(user.id)}>Follow</button>}
+                        <button disabled={props.disableButtonStatus.some(id => id === user.id)}
+                                onClick={() => props.unfollow(user.id)}>Unfollow
+                        </button> :
+                        <button disabled={props.disableButtonStatus.some(id => id === user.id)}
+                                onClick={() => props.follow(user.id)}>Follow
+                        </button>}
                 </div>
             </span>
                 <span className={style.previewRight}>
@@ -51,6 +50,7 @@ const User = (props) => {
                 </span>
             </span>
             </div>)}
+            {props.isFetching ? <Preloader/> : null}
         </div>
     );
 };

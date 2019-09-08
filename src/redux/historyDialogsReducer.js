@@ -78,13 +78,13 @@ const historyDialogsReducer = (state = initializationState, action) => {
     }
 };
 
-export const addMyMessageCreator = () => {
+export const addMyMessage = () => {
     return ({type: ADD_MY_MESSAGE});
 };
-export const updateMyMessageCreator = (newText) => {
+export const updateMyMessage = (newText) => {
     return ({type: UPDATE_MY_MESSAGE, newText: newText});
 };
-export const setCurrentIdCreator = (currentId) => {
+export const setCurrentId = (currentId) => {
     return ({type: SET_CURRENT_ID, currentId: currentId});
 };
 

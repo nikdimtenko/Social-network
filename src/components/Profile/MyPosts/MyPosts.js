@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './MyPosts.module.css';
-import postsStyle from './Post/Post.module.css'
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
@@ -25,7 +24,7 @@ const MyPosts = (props) => {
             <div className={s.container}>
                 <h3>List post</h3>
             </div>
-            <div className={postsStyle.posts}>
+            <div className={s.posts}>
                 {mapPostData}
             </div>
 

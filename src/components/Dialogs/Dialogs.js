@@ -15,7 +15,7 @@ const Dialogs = (props) => {
             return temp;
     };
 
-    let dialogsItem = props.dialogsItem.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} sendId={props.sendId}/>);
+    let dialogsItem = props.dialogsItem.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} sendId={props.setCurrentId}/>);
     let messagesItem = props.Messages.map(testFunc);
 
     return (
@@ -28,8 +28,8 @@ const Dialogs = (props) => {
                     {messagesItem}
                 </div>
                 <div className={s.sendMessage}>
-                    <SendMessage sendMessage={props.sendMessage}
-                                 updateTextMessage={props.updateTextMessage}
+                    <SendMessage sendMessage={props.addMyMessage}
+                                 updateTextMessage={props.updateMyMessage}
                                  newMyTextMessage={props.newMyTextMessage}/>
                 </div>
             </div>

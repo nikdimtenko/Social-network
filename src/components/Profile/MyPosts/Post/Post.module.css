@@ -1,9 +1,4 @@
-.posts {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
+
 
 .item img {
     width: 50px;

@@ -8,18 +8,30 @@
     margin-left: 10px;
 }
 
-.header a {
-    float: right;
-    color: black;
-    margin: 10px 40px 0px 0px;
-    text-decoration: none;
-    padding: 8px 25px;
-    background: #79B362;
-    border-radius: 5px;
-}
-
 .singIn {
     float: right;
     width: 40px;
     margin: 9px;
+}
+
+.myAccount {
+    height: 100%;
+    float: right;
+    margin-right: 5%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.myAccount img {
+    width: 30px;
+    margin-right: 5%;
+}
+
+.myAccount a {
+    padding: 5px 10px;
+    background: #79B362;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
 }
